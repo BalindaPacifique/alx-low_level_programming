@@ -1,14 +1,14 @@
 #include <stdio.h>
+
 /**
- * mai - prints numbers of base ten
- * Return: 0 (Success)
+ * main - print numbers of base ten
+ *
+ * Return: 0 success, else 1 error
  */
 int main(void)
-
 {
 	int base_ten = '0';
-
-	while (base_ten <= 10)
+	while (base_ten <= '9')
 	{
 		putchar(base_ten);
 		base_ten++;
