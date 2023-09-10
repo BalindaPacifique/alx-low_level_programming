@@ -2,7 +2,7 @@
 
 /**
  * main - prints alphabet in apper and lower letter
- * Return; 0 (Success)
+ * Return: 0 (Success)
  */
 int main(void)
 
