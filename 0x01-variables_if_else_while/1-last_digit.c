@@ -4,7 +4,7 @@
 
 /**
  * main - print the last digit of the number stored in the variable
- * Return: 0 (Success)
+ * Return: 0 (Success) eslse 1 error
  */
 int main(void)
 {
