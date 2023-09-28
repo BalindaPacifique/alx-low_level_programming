@@ -2,7 +2,8 @@
 
 /**
  *  _sqrt_n - returns the natural square root of a number.
- * @n: number
+ * @n: square of number
+ * @b: square root of number
  * Return: the square root of n
  * If n does not have a natural square root, the function should return -1
  */
