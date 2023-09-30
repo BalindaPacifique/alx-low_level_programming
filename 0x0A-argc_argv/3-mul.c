@@ -50,16 +50,11 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int a, b, result;
-
-	if (argc < 3 || argc > 3)
+	if (argc < 3 && argc > 3)
 	{
 		printf("error\n");
 		return (1);
 	}
-	a = _atoi(argv[1]);
-	b = _atoi(argv[2]);
-	result = a * b;
-	printf("%d\n", result);
+	printf("%d\n", _atoi(argv[1]) * _atoi(argv[2]));
 	return (0);
 }
