@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	for (j = 0; j < n; j++)
 	{
-		if (i == n - 1)
+		if (j == n - 1)
 		{
 			printf("%02hhx\n", a[j]);
 			break;
