@@ -15,20 +15,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *value_copy;
 	unsigned long int indx, i;
 
-	if (hptr == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
 	value_copy = strdup(value);
 	if (value_copy == NULL)
 		return (0);
 
-	indx = key_index((const unsigned char *)key, hptr->size);
-	for (i = indx; hptr->array[i]; i++)
+	indx = key_index((const unsigned char *)key, ht->size);
+	for (i = indx; ht->array[i]; i++)
 	{
-		if (strcmp(hptr->array[i]->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(hptr->array[i]->value);
-			hptr->array[i]->value = value_copy;
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_copy;
 			return (1);
 		}
 	}
@@ -46,8 +46,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	new->value = value_copy;
-	new->next = hptr->array[indx];
-	hptr->array[indx] = new;
+	new->next = ht->array[indx];
+	ht->array[indx] = new;
 
 	return (1);
 }
