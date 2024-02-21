@@ -5,9 +5,7 @@ OBJ = $(SRC: .c = .o)
 NAME = school
 RM = rm -f
 
-all: $(OBJ) $(SRC)
-	$(CC) $(CFLAGS) -c -o main.o main.c
-	$(CC) $(CFLAGS) -c -o school.o school.c
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
