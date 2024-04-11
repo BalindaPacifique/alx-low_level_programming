@@ -1,0 +1,6 @@
+/*
+ * Space complexity of allocate_map function:
+ *   - It allocates memory for a 2D array of size n x m.
+ *   - The space complexity is O(n * m) since it depends on the input size n and m.
+ */
+
